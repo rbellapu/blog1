@@ -1,0 +1,7 @@
+<% if current_user %>
+	You're signed in! Do you want to log out?
+	<%= link_to "log out", destroy_user_session_path, method: :delete %>
+<% else %>
+	You need to log in
+	<%= link_to "log in", new_user_session_path %>
+<% end %>
